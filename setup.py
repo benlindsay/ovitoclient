@@ -4,6 +4,14 @@
 """The setup script."""
 
 from setuptools import setup, find_packages
+import os
+import shutil
+
+script_from_path = 'ovitoclient/ovitoclient.py'
+script_to_path = 'build/_scripts/ovitoclient'
+script_to_dir = os.path.dirname(script_to_path)
+os.makedirs(script_to_dir, exist_ok=True)
+shutil.copyfile(script_from_path, script_to_path)
 
 with open('README.rst') as readme_file:
     readme = readme_file.read()
@@ -41,6 +49,7 @@ setup(
     keywords='ovitoclient',
     name='ovitoclient',
     packages=find_packages(include=['ovitoclient']),
+    scripts=[script_to_path],
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
