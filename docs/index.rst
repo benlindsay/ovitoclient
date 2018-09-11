@@ -1,5 +1,5 @@
 Welcome to Ovito Client's documentation!
-======================================
+========================================
 
 .. toctree::
    :maxdepth: 2
