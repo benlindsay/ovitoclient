@@ -6,9 +6,6 @@
 import pytest
 
 
-from ovitoclient import ovitoclient
-
-
 @pytest.fixture
 def response():
     """Sample pytest fixture.
