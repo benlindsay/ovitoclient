@@ -1,3 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# File              : ovitoclient.py
+# Author            : Christian Tabedzki <tabedzki@seas.upenn.edu>
+# Date              : 12.09.2018
+# Last Modified Date: 12.09.2018
+# Last Modified By  : Christian Tabedzki <tabedzki@seas.upenn.edu>
 #!/usr/bin/env ovitos
 # -*- coding:utf-8 -*-
 #
@@ -81,7 +88,8 @@ def add_output_path(args):
         )
         if not args.same_dir:
             args.output_file = args.output_file.replace('/raw/', '/processed/')
-
+    else:
+        args.output_file = os.path.abspath(args.output_file)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Render GIF from lammpstrj file")
