@@ -1,10 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# File              : ovitoclient.py
-# Author            : Christian Tabedzki <tabedzki@seas.upenn.edu>
-# Date              : 12.09.2018
-# Last Modified Date: 12.09.2018
-# Last Modified By  : Christian Tabedzki <tabedzki@seas.upenn.edu>
 #!/usr/bin/env ovitos
 # -*- coding:utf-8 -*-
 #
