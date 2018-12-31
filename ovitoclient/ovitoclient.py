@@ -21,7 +21,6 @@ from PyQt5 import QtCore
 import argparse
 import os
 
-
 IMAGE_TYPES = ['png', 'jpg', 'jpeg', 'tif', 'tiff']
 MOVIE_TYPES = ['gif', 'avi', 'mov', 'mp4']
 ALL_OUTPUT_TYPES = IMAGE_TYPES + MOVIE_TYPES
@@ -83,7 +82,6 @@ def main(args):
 
 def add_output_path(args):
     args.input_file = os.path.abspath(args.input_file)
-    args.input_file = args.input_file.replace('\\*', '*')
     input_ext = args.input_file.split('.')[-1]
     if args.output_file is None:
         args.output_file = (
@@ -100,7 +98,6 @@ def add_output_path(args):
                 ".{} is not a valid output extension.\n".format(args.output_ext)
                 + "Accepted extensions: {}".format(ALL_OUTPUT_TYPES)
             )
-
 
 def add_custom_range(args):
     if args.custom_range is None:
